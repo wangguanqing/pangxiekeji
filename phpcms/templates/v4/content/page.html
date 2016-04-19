@@ -1,0 +1,22 @@
+{template "content","header"}
+<link rel="stylesheet" href="{CSS_PATH}v4/about.css">
+
+<div class="container clear">
+    <ul class="company-title-list bottom-solid-line clear">
+        {loop $arrchild_arr $cid}
+            {if $catid==$cid}
+                <li><h1>{$CATEGORYS[$cid][catname]}</h1></li>
+            {else}
+                <li><a href="{$CATEGORYS[$cid][url]}">{$CATEGORYS[$cid][catname]}</a></li>
+            {/if}
+        {/loop} 
+    </ul>
+<div class="content about-content">
+    {$content}
+</div>
+</div>
+
+
+{template "content","footer"}
+
+

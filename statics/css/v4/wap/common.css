@@ -1,0 +1,271 @@
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  font-family: "Hiragino Sans GB","Microsoft Yahei",Arial,sans-serif;
+  color: #333;
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  color: #333;
+  text-decoration: none; }
+
+a:hover {
+  color: #2389cb;
+  text-decoration: none; }
+
+button, input {
+  border: 0 none transparent;
+  -webkit-appearance: none;
+  outline: 0;
+  border-radius: 0rem; }
+
+.clearfix {
+  *zoom: 1;
+  clear: both; }
+
+.clearfix:before, .clearfix:after {
+  display: table;
+  line-height: 0;
+  content: ""; }
+
+.clearfix:after {
+  clear: both; }
+
+.r {
+  float: right; }
+
+.l {
+  float: left; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+.invisible {
+  visibility: hidden; }
+
+.affix {
+  position: fixed;
+  top: 0; }
+
+.ell {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.inb {
+  display: inline-block;
+  vertical-align: middle;
+  *display: inline;
+  *zoom: 1; }
+
+.text-wrap {
+  word-wrap: break-word;
+  word-break: break-all; }
+
+body, html {
+  height: 100%; }
+
+body {
+  background: #f2f2f2; }
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  width: 26.66667rem;
+  padding-bottom: 12.08889rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden; }
+
+/*header*/
+.header {
+  margin-bottom: 1.24444rem;
+  background: #fff; }
+
+.h-logo {
+  padding: 0.53333rem 1.06667rem; }
+
+.h-logo img {
+  width: 8.17778rem;
+  height: 2.84444rem;
+  display: inline-block; }
+
+.h-nav {
+  display: -webkit-box;
+  display: box;
+  box-shadow: 0rem 0.21333rem 0.35556rem #c3c3c3; }
+
+.h-nav li {
+  line-height: 2.13333rem;
+  font-size: 1.20889rem;
+  text-align: center;
+  -webkit-box-flex: 1;
+  display: block;
+  box-sizing: border-box; }
+
+.h-nav li.active {
+  border-bottom: 0.21333rem solid #1c89ca; }
+
+/*main*/
+/*footer*/
+.footer {
+  height: 12.08889rem;
+  position: absolute;
+  height: 12.08889rem;
+  width: 100%;
+  left: 0rem;
+  bottom: 0rem;
+  background: #23282d; }
+
+.footer .f-corp {
+  padding: 0.71111rem 1.06667rem;
+  background: #2d3237; }
+
+.f-corp p {
+  text-align: center;
+  line-height: 2.13333rem; }
+
+.f-corp .corp-name {
+  font-size: 0.99556rem;
+  color: #fff; }
+
+.f-corp .corp-info {
+  font-size: 0.92444rem;
+  color: #aaa; }
+
+.f-corp .corp-info a {
+  color: #b1d1e8;
+  margin: 0 0.71111rem; }
+
+.f-copy {
+  text-align: center;
+  padding: 0.71111rem 2.48889rem;
+  font-size: 0.85333rem;
+  line-height: 1.42222rem;
+  color: #666;
+  background: #23282d; }
+
+/*# sourceMappingURL=common.css.map */

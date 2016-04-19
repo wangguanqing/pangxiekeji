@@ -1,0 +1,33 @@
+{template "content","header"}
+<link rel="stylesheet" href="{CSS_PATH}v4/list.css"> 
+<link rel="stylesheet" href="{CSS_PATH}v4/pages.css"> 
+        <!-- con开始 -->
+        <div class="con-out">
+            <div class="news">
+                <div class="w-1170">
+                    <div class="search-h clearfix">
+                        <div class="l result">总共有 {$total} 条记录</div>
+                        <div class="r">
+                            <form action="#" class="search-list clearfix">
+                                <input type="text" value="" class="keyword l"/>
+                                <input type="submit" value="" class="sub l">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="news-list clearfix">
+                        {loop $datas $r}
+                        <dl>
+                            <dt><a href="{$r['url']}" target=_blank><img src="{$r['thumb']}" ></a></dt>
+                            <dd class="title"><a href="{$r['url']}" target=_blank>{$r['title']}</a></dd>
+                        </dl> 
+                        {/loop}
+
+                    </div>
+                    <div id="pages" class="text-c" style="text-align: center;">{$pages}</div>
+                </div>
+            </div>
+        </div>
+        <!-- con结束 -->
+
+<!-- 底部开始 -->
+{template "content","footer"}

@@ -1,0 +1,102 @@
+@function mfe-px2rem($px) {
+    @return $px/28.125 + rem;
+}
+.main{
+    padding: 0 mfe-px2rem(30);
+}
+.m-box{
+    padding: 0 mfe-px2rem(23);
+    margin-bottom: mfe-px2rem(35);
+    border: 1px solid #d6d6d6;
+    box-shadow: mfe-px2rem(0) mfe-px2rem(4) mfe-px2rem(15) mfe-px2rem(0) #d6d6d6;
+    background: #fff;
+}
+.m-box h2{
+    font-size: mfe-px2rem(30);
+    color: #1c89ca;
+    padding: mfe-px2rem(25) 0 mfe-px2rem(10) mfe-px2rem(3);
+}
+.m-box dl{
+    padding: mfe-px2rem(30) 0;
+    border-bottom: 1px solid #eaeaea;
+}
+.m-box dl dt{
+    float: left;
+}
+.m-box dl .m-title{
+    line-height: 1.5em;
+}
+.m-box dl .m-date{
+    color: #757575;
+    font-size: mfe-px2rem(24);
+}
+
+.m-box .m-box-spec dl{
+    min-height: mfe-px2rem(144);
+}
+.m-box-spec dl dt{
+    width: mfe-px2rem(176);
+    height: mfe-px2rem(144);
+}
+.m-box-spec dl dt img{
+    width: mfe-px2rem(176);
+    height: mfe-px2rem(144);
+}
+.m-box-spec dl dd{
+    margin-left: mfe-px2rem(200);
+}
+.m-box-spec dl .m-title{
+    font-size: mfe-px2rem(30);
+}
+.m-box-spec dl .m-date{
+    margin-top: mfe-px2rem(35);
+}
+
+.m-box .m-box-normal dl{
+    min-height: mfe-px2rem(100);
+}
+.m-box-normal dl dt{
+    width: mfe-px2rem(118);
+    height: mfe-px2rem(100);
+}
+.m-box-normal dl dt img{
+    width: mfe-px2rem(118);
+    height: mfe-px2rem(100);
+}
+.m-box-normal dl dd{
+    margin-left: mfe-px2rem(140);
+}
+.m-box-normal dl .m-title{
+    font-size: mfe-px2rem(28);
+}
+.m-box-normal dl .m-date{
+    margin-top: mfe-px2rem(25);
+}
+
+.m-list .m-list-more{
+    display: block;
+    text-align: center;
+    line-height: mfe-px2rem(90);
+    color: #4caf50;
+    font-size: mfe-px2rem(30);
+}
+.m-new ul{
+    padding: mfe-px2rem(15) 0 mfe-px2rem(25) 0;
+}
+.m-new ul li{
+    position: relative;
+    padding-left: mfe-px2rem(40);
+    font-size: mfe-px2rem(28);
+    line-height: 1.5em;
+    margin-bottom: mfe-px2rem(15);
+}
+.m-new ul li span{
+    position: absolute;
+    display: inline-block;
+    width: mfe-px2rem(10);
+    height: mfe-px2rem(10);
+    left: mfe-px2rem(6);
+    top: mfe-px2rem(15);
+    background: #ccc;
+}
+

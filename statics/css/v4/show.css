@@ -1,0 +1,159 @@
+/* 
+* @Author: xukuikui
+* @Date:   2016-01-19 17:17:53
+* @Last Modified by:   xukuikui
+* @Last Modified time: 2016-02-24 09:54:46
+*/
+.show-con {
+	padding:53px 0px 38px;
+	background: #fff;
+}
+.show-con h3.dec{
+	font-size:14px;
+	padding-bottom: 14px;
+	border-bottom:1px solid #d5d5d5;
+
+}
+.show-con h3.dec s{
+	display: inline-block;
+	height:12px;
+	margin:0px 12px;
+	border:1px solid #d5d5d5;
+}
+.show-con-con{
+	font-size:18px;
+	line-height:1.8em!important;
+}
+.show-con h1{
+	text-align: center;
+	font-size:30px;
+	line-height: 1em!important;
+	font-weight: bold;
+	margin:45px 0px;
+}
+.show-con-con img{
+	display: block;
+	max-width: 100%!important;
+	margin:0 auto;
+}
+.keyword {
+	margin-top:55px;
+}
+.keyword a{
+	padding:10px;
+	margin-right:10px;
+	background:#f2f2f2;
+}
+.share{
+	margin-top:33px;
+}
+
+.related h2{
+	font-size:15px;
+	color:#b5b5b5;
+}
+.related-list{
+	margin-right:-20px;
+}
+
+.related-list dl{
+	float:left;
+	width:180px;
+	margin-right:20px;
+
+}
+.related-list dl dt{
+	position: relative;
+	width:180px;
+	height:120px;
+	margin-bottom:10px;
+}
+.related-list dl img{
+	width:180px;
+	height:120px;
+}
+
+.related-list dl dd{
+	line-height: 1.6em;
+}
+.comment h2{
+	font-size:15px;
+	color:#b5b5b5;
+}
+.video-con{
+	padding-top:12px;
+	background:#333333;
+}
+.video-con img{
+	width:780px;
+}
+
+.show-video-con{
+	padding-top:0px;
+}
+.show-video-con h1{
+	text-align: left;
+}
+.show-video-con h3.dec{
+	border:0px;
+	padding-bottom:37px;
+	color:#999999;
+}
+.open span{
+	width:10px;
+	height:10px;
+	display: inline-block;
+}
+.open span:before{
+	width:20px;
+	height:10px;
+	background:#666666;
+}
+.related-list dl dt span{
+	position: absolute;
+	right:0px;
+	bottom:0px;
+	color:#fff;
+	font-size:12px;
+	padding:5px 4px;
+	background:rgba(0,0,0,.6);
+}
+/* 评测专属css */
+.show-pingce{
+	padding-top:34px;
+}
+.show-pingce .show-title{
+	position: relative;
+	margin-bottom:25px;
+}
+.show-pingce .show-title .info-pos{
+	position: absolute;
+	left:0px;
+	bottom:0px;
+	padding:18px 18px 30px;
+	color:#fff;
+}
+.show-pingce .show-title h1{
+	margin:20px 0px;
+    line-height: 1.5em!important;
+	text-align: left;
+}
+.show-pingce .show-title h3.dec{
+	border-bottom: 0px;
+	padding:0px;
+}
+
+.show-content{
+	height:65px;
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+

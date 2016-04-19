@@ -1,0 +1,166 @@
+{template "content","header"}
+<script type="text/javascript" src="{JS_PATH}v4/common.js"></script>
+<script type="text/javascript" src="{JS_PATH}v4/swiper.min.js"></script>
+<script type="text/javascript" src="{JS_PATH}v4/jquery.foucs.js"></script>
+<script type="text/javascript" src="{JS_PATH}v4/index.js"></script>
+<link rel="stylesheet" href="{CSS_PATH}v4/swiper.min.css">
+<link rel="stylesheet" href="{CSS_PATH}v4/index.css">
+        <!-- con开始 -->
+        <div class="con-out">
+            <!-- slide开始 -->
+            <div class="slide" id="indexSlide">
+                <div id="index_b_hero">
+                    <div class="hero-wrap">
+                        <ul class="heros clearfix">
+                        {pc:content  action="lists" modelid="1" tagid="index_1" grade="8" typeid="53,54,55,56,57,58" catid="9,10,11,12,13,14,22,16,17,18,19,21" order="id DESC" thumb="1" thumbnum="1" num="5"}
+                            {loop $data $r}
+                            <li class="hero">
+                                <a href="{$r['url']}" target="_blank">
+                                    <img src="{$r['thumb']}" class="thumb"/>
+                                    <span>{$r['title']}</span>
+                                </a>
+                            </li> 
+                            {/loop}
+                         {/pc}   
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="helper">
+                    <a href="javascript:;" class="prev icon-arrow-a-left"></a>
+                    <a href="javascript:;" class="next icon-arrow-a-right"></a>
+                </div>
+            </div>
+            <!-- slide结束 -->
+            
+            <div class="hot-list">
+                <div class="w-1170">
+                    <ul class="clearfix">
+                        {pc:content  action="lists" modelid="1" tagid="index_2" keywords="活动,广告,要闻" typeid="53,54,55,56,57,58" catid="9,10,11,12,13,14,22,16,17,18,19,21" order="id DESC" thumb="1" thumbnum="2" num="4"}
+                            {loop $data $r}
+                            <li>
+                            <a href="{$r['url']}"><img src="{$r['thumb']}" alt="{$r['title']}">{$r['title']}</a>
+                            </li> 
+                            {/loop}
+                        {/pc}
+                    </ul>
+                </div>
+            </div>
+            <div class="today-express bg-f4f4f4">
+                <div class="w-1170">
+                    <span class="line-icon"></span>
+                    <span class="today-title">推荐产品</span>
+                    <div class="today-con swiper-container">
+                        <div class="today-list swiper-wrapper clearfix">
+                            {pc:content  action="lists" tagid="index_paokuan" modelid="12" catid="22" order="id DESC" thumb="1" num="6"}
+                                {loop $data $r}
+                                    <dl class="swiper-slide">
+                                        <a href="{$r['url']}">
+                                            <dt><img src="{$r['thumb']}" alt="{$r['title']}"></dt>
+                                            <dd>{str_cut($r['title'],46,false)}</dd>
+                                            <dd class="price">￥{$r['price']}</dd>
+                                        </a>
+                                    </dl> 
+                                {/loop}
+                            {/pc}
+                        </div>
+                        <a href="javascript:;" class="swiper-button-prev prev icon-today-a-left"></a>
+                        <a href="javascript:;" class="swiper-button-next next icon-today-a-right "></a>
+                    </div>
+                    
+                    <a href="#" class="more">更多</a>
+                </div>
+            </div>
+
+            <div class="news bg-fff" style="background: #fff;">
+                <div class="w-1170">
+                    <h2>最新资讯</h2>
+                    <div class="news-list clearfix">
+                        {pc:content  action="lists" tagid="index_new_zuixin" modelid="1" typeid="54" catid="9,10,11" order="id DESC" thumb="1" num="6"}
+                            {loop $data $r}
+                                <dl>
+                                <dt><a href="{$r['url']}"><img src="{$r['thumb']}" alt=""></a></dt>
+                                <dd class="title"><a href="{$r['url']}">{str_cut($r['title'],48)}</a></dd>
+                                <dd>{str_cut($r['description'],168)}</dd>
+                                </dl> 
+                            {/loop}
+                        {/pc}
+                    </div>
+                    <a href="{APP_PATH}index.php?m=content&c=index&a=type_list&typeid=54&modelid=1" class="more">更多</a>
+                </div>
+            </div>
+
+            
+            <div class="hot-video bg-f4f4f4">
+                <div class="w-1170">
+                    <h2>热点视频</h2>
+                    <div class="hot-video-list clearfix">
+                        {pc:content  action="lists" modelid="11" tagid="index_hot_video" grade="5" typeid="53" catid="16,17,18,19" order="id DESC" thumb="1" thumbnum="1" num="3"}
+                            {loop $data $r}
+                                {if $n==1}
+                                    <a href="{$r['url']}" class="video-list first-video-list"><img src="{$r['thumb']}" alt=""><span>{str_cut($r['title'],90)}<s class="video-icon"></s></span></a>
+                                {else}
+                                    <a href="{$r['url']}" class="video-list"><img src="{$r['thumb']}" alt=""><span>{str_cut($r['title'],52,'...')}<s class="video-icon"></s></span></a> 
+                                {/if}
+                            {/loop}
+                        {/pc}    
+
+                        {pc:content  action="lists" modelid="11" tagid="index_hot_video_2" grade="4" typeid="53,54,55,56,57,58" catid="16,17,18,19" order="id DESC" thumb="1" num="3"}
+                            {loop $data $r} 
+                                    <a href="{$r['url']}" class="video-list"><img src="{$r['thumb']}" alt=""><span>{str_cut($r['title'],52,'...')}<s class="video-icon"></s></span></a> 
+                            {/loop}
+                        {/pc} 
+                        
+                    </div> 
+                    <a href="{$CATEGORYS['15']['url']}" class="more">更多</a>
+                </div>
+            </div>
+            
+            <div class="news-eval bg-fff">
+                <div class="w-1170">
+                    <h2>热门评测</h2>
+                    <div class="news-eval-list clearfix">
+                        {pc:content  action="lists" modelid="1" tagid="index_hotpingche" typeid="53" catid="9,10,11,12,13,14,16,17,18,19,21" order="id DESC" thumb="1" thumbnum="2" num="5"}
+                            {loop $data $r}
+                                {if $n==1}
+                                    <dl class="first-news-eval">
+                                        <dt><a href="{$r['url']}"><img src="{$r['thumb']}" alt=""></a></dt>
+                                        <dd class="title"><a href="{$r['url']}" target=_blank>{$r['title']}</a></dd>
+                                        <dd>{$r['description']}</dd>
+                                    </dl>
+                                {else}
+                                    <dl>
+                                    <dt><a href="{$r['url']}"><img src="{$r['thumb']}" alt=""></a></dt>
+                                    <dd class="title"><a href="{$r['url']}">{$r['title']}</a></dd>
+                                    </dl>
+                                {/if}
+                             
+                            {/loop}
+                        {/pc} 
+
+                    </div>
+                    <a href="{APP_PATH}index.php?m=content&c=index&a=type_list&typeid=53&modelid=1" class="more">更多</a>
+                </div>
+                
+            </div> 
+            <div class="the-latest">
+                <div class="w-1170">
+                    <h2>最新动态</h2>
+                    <ul class="clearfix">
+                        {pc:content  action="lists" tagid="index_new_news" typeid="54,57" catid="9,10,11,12,13,14" order="id DESC" num="10"}
+                            {loop $data $r}
+                                <li><s class="block-icon"></s><a href="{$r['url']}" target=_blank>{$r['title']}</a></li> 
+                            {/loop}
+                        {/pc}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- con结束 -->
+
+
+<!-- 底部开始 -->
+{template "content","footer"}
+
+
+

@@ -1,0 +1,226 @@
+/* 
+* @Author: xukuikui
+* @Date:   2016-01-19 17:17:53
+* @Last Modified by:   xukuikui
+* @Last Modified time: 2016-02-29 22:15:09
+*/
+/*.slide{
+	min-width:1170px;
+	padding: 10px 0px 28px;
+	background:#343536;
+}*/
+.column{
+	padding:22px 0px 40px;
+	background:#fff;
+}
+.column .w-1170{
+	overflow: hidden;
+}
+.column h2{
+	padding:0px;
+	border-bottom:2px solid #343536;
+}
+.column h2 span.title{
+	float:left;
+	padding:15px 26px;
+	color:#fff;
+	background:#343536;
+}
+.column p.column-nav{
+	padding:20px 0px 0px;
+	font-size:16px;
+}
+.column p.column-nav a{
+	margin:0px 20px;
+}
+.column p.column-nav a.active{
+	color:#2389cb;
+}
+.column .column-list{
+	margin:30px -30px 30px 0px;
+	border-bottom:1px solid #e5e5e5;
+}
+.column .column-list dl{
+	width:370px;
+	margin:0px 30px 30px 0px;
+	float:left;
+}
+.column .column-list dl dt{
+	position: relative;
+}
+.column .column-list img{
+	width:100%;
+	height:210px;
+}
+.column .column-list dl dt s.video-big-icon{
+	display: none;
+	position: absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,.5) url(../../images/v4/video2_icon.png) no-repeat center center;
+}
+.column .column-list dl dt a:hover s.video-big-icon{
+	display: block;
+}
+.column .column-list dl dd{
+	line-height:38px;
+	font-size:18px;
+}
+.column .next{
+	width:129px;
+	height:55px;
+	line-height:55px;
+}
+.news .news-list dl{
+	height:365px;
+}
+/* .slide-l-icon{
+	display: inline-block;
+	width:26px;
+	height:20px;
+	background: url(../img/lr_big_icon.png) no-repeat 0px center;
+}
+.slide-r-icon{
+	display: inline-block;
+	width:26px;
+	height:20px;
+	background: url(../img/lr_big_icon.png) no-repeat -27px center;
+}
+.swiper-container {
+    width: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width: 250px;
+    height: 300px;
+	overflow: hidden;
+    Center slide text vertically
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide a{
+	color:#fff;
+	display: block;
+	width:100%;
+	height:100%;
+}
+.swiper-slide a:hover{
+	color:#2389cb;
+}
+.swiper-slide img{
+	display: block;
+	width:auto;
+	min-width: 100%;
+	height: 303px;
+
+}
+.swiper-button-prev,.swiper-button-next{
+	left:0px;
+	width:43px;
+	height:45px;
+	line-height:54px;
+	text-align: center;
+	background:rgba(0,0,0,.3);
+}
+.swiper-button-next{
+	left:auto;
+	right:0px;
+}
+.swiper-slide .tag{
+	position: absolute;
+	left:26px;
+	bottom:92px;
+	padding:5px;
+	background:#263238;
+	font-size:14px;
+}
+.swiper-slide .title{
+	position: absolute;
+    padding: 18px 26px;
+    line-height: 1.3em;
+    left: 0px;
+    bottom: 0px;
+    font-size: 24px;
+    text-align: left;
+}
+.swiper-slide a:hover .tag{
+	color:#fff;
+} */
+/* 幻灯片样式 */
+.slide {padding-top:10px;overflow: hidden; zoom: 1; position: relative; background:#343536;height:313px;}
+#index_b_hero { width: 426px; height:313px; margin: auto; position: relative; }
+#index_b_hero img { width: 426px; height: 313px; }
+#index_b_hero .heros {  width: 426px; height: 313px;}
+#index_b_hero .hero-wrap { overflow: visible; position: absolute; }
+.slide .helper{
+	position: absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	margin-top:10px;
+}
+.slide .next, .slide .prev { position: absolute; top: 0px;background-color: rgba(0,0,0,.5); z-index: 3; }
+
+.slide .next {right: 0; }
+.slide .disabled { background-color: #eee; }
+.slide .hero { z-index: 1; position: absolute; top: 0; left: 0; width: 426px; height: 313px; overflow: hidden; left: 872px; }
+.slide .mask-right { left: 436px; }
+.slide .active { z-index: 2; left: 0; }
+.icon-arrow-a-left { background:url(../../images/v4/l.png) no-repeat 12px center; height: 100%; width: 50px; }
+.icon-arrow-a-right { background:url(../../images/v4/r.png) no-repeat 21px center; height: 100%; width: 50px; height: 100%; width: 50px; }
+.hero a{
+	color:#fff;
+	display: block;
+	width:100%;
+	height:100%;
+}
+.hero a:hover{
+	color:#2389cb;
+}
+.hero .tag{
+	position: absolute;
+	left:26px;
+	bottom:92px;
+	padding:5px;
+	background:#263238;
+	font-size:14px;
+}
+.hero .title{
+	position: absolute;
+    padding: 18px 26px;
+    line-height: 1.3em;
+    left: 0px;
+    bottom: 0px;
+    font-size: 24px;
+    text-align: left;
+}
+.hero a:hover .tag{
+	color:#fff;
+}
+
+.bg-gra {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 0;
+    width: 100%;
+    height: 150px;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.8));
+}
+
+

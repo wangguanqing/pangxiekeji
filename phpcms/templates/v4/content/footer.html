@@ -1,0 +1,46 @@
+
+        <!-- 底部开始 -->
+        <div class="footer">
+            <div class="w-1170 clearfix">
+                <div class="info">
+                    <div class="logo-text-icon"></div>
+                    <ul class="clearfix">
+                        {pc:content action="category" catid="1" num="15" siteid="1" order="listorder ASC"} 
+                        {loop $data $r}
+                            <li><a href="{$r['url']}">{$r['catname']}</a></li>
+                        {/loop}  
+                        {/pc}
+                    </ul>
+                    <p class="record">© 2016 PANGXIEKEJI.COM 螃蟹科技 京ICP备15036583号-1</p>
+                </div>
+                <div class="links">
+                    <p>友情链接:</p>
+                    <div class="links-list">
+                        {pc:link action="lists" typeid="0" siteid="1" linktype="0" order="desc" num="6" return="dat"}
+                            {loop $dat $v}
+                             <a href="{$v[url]}" target="_blank">{$v['name']}</a>
+                            {/loop}
+                        {/pc} 
+                    </div>
+                </div>
+                <div class="follow">
+                    <p>关注我们</p>
+                    <div class="follow-list">
+                        <a href="#" class="weixin-big-icon">微信<div class="<!-- weixin-f-code -->"></div></a>
+                        <a href="http://weibo.com/p/1006065606718419" class="weibo-big-icon">微博</a>
+                        <a href="mailto:tougao@pangxiekeji.com" class="mail-icon">站内信</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部结束 -->
+        <!-- 回到顶部start -->
+        <div class="r-menu">
+            <a href="javscript:;" class="follow"><div class="code"></div></a>
+            <a href="javascript:;" class="go-top"></a>
+        </div>
+        <!-- 回到顶部end -->
+        
+    </div>
+</body>
+</html>

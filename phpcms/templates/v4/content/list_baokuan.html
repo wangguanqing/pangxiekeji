@@ -1,0 +1,108 @@
+{template "content","header"}
+<link rel="stylesheet" href="{CSS_PATH}v4/recommend.css">
+<script type="text/javascript" src="../statics/js/swiper.min.js"></script>
+<script type="text/javascript" src="../statics/js/recommend.js"></script>        
+
+        <!-- 头部结束 -->
+        <!-- con开始 -->
+        <div class="con-out">
+            <div class="rec-con">
+                <div class="rec-hot bg-fff">
+                  {pc:content  action="lists" modelid="12" tagid="list_boakuan_1" grade="5" catid="22" order="id DESC" thumb="1" num="1"}
+                            {loop $data $r} 
+                            
+                    <div class="w-1170 clearfix">
+                        <div class="rec-l l">
+                            <div class="rec-hot-slide">
+                                <div class="slide">
+                                    <img src="{$r['thumb']}">
+                                </div>
+                            </div>
+                            <dl>
+                                <dt>{$title}</dt>
+                                <dd>{str_cut($r['description'],160)}</dd>
+                                <dd class="link"><a href="{$r['url']}">阅读更多</a></dd>
+                            </dl>
+                        </div>
+                        <div class="rec-r r">
+                           <h2><p><span>今</span><span>日</span><span>爆</span><span>款</span></p></h2> 
+                           <dl>
+                               <dt>{$short_title}</dt>
+                               <dd><a href="{$r['url']}"><span class="price">￥{$r['price']}</span><span>立即购买>></span></a></dd>
+                           </dl>
+                           <div class="rec-hot-video">
+                                                    <!-- 这里是视频代码 -->
+                    {if $r['platform']=='qq'}
+                        <iframe frameborder="0" width="534" height="300" src="http://v.qq.com/iframe/player.html?vid={$r['platform_vid']}&tiny=1&auto=0" allowfullscreen></iframe>
+                    {elseif $r['platform']=='letv'}
+                    <object width="534" height="300"><param name="allowFullScreen" value="true"><param name="flashVars" value="id={$r['platform_vid']} " /><param name="movie" value="http://i7.imgs.letv.com/player/swfPlayer.swf?autoplay=0" /><embed src="http://i7.imgs.letv.com/player/swfPlayer.swf?autoplay=0" flashVars="id={$r['platform_vid']}" width="780" height="430" allowFullScreen="true" type="application/x-shockwave-flash" ></embed></object>
+
+                    {elseif $r['platform']=='youku'}
+                        <iframe frameborder="0" width="534" height="300" src="http://player.youku.com/embed/{$r['platform_vid']}" allowfullscreen></iframe>
+                    {elseif $r['platform']=='tudou'}
+                        <iframe src="http://www.tudou.com/programs/view/html5embed.action?typpe=0&code={$r['platform_vid']}&lcode=&resourceId=0_06_05_99" allowtransparency="true" allowfullscreen="truue" allowfullscreenInteractive="true" scrolling="no" border="0" frameborder="0" width="534" height="300"></iframe>
+                    {/if}
+                           </div>
+                        </div> 
+                    </div>
+
+                    {/loop}
+                  {/pc}
+
+
+
+
+
+
+                </div>
+                <div class="rec-list bg-f4f4f4">
+                    <div class="w-962">
+                        <div class="rec-line-icon"></div>
+                        <h2>往期推荐</h2>
+                        <div class="rec-list-con clearfix">
+                            <div class="rec-list-line">
+                            </div>
+
+                            {pc:content  action="lists" catid="22" modelid="12" order="id DESC" thumb="1" num="4"}
+                            {loop $data $r}
+                                <div class="{if $n%2==0}rec-list-odd{else}rec-list-even{/if} clearfix">
+                                   <dl class="rec-list-text">
+                                       <dt><img src="{$r['thumb']}" alt=""></dt>
+                                       <dd class="title">{$r['title']}</dd>
+                                       <dd class="info">{$r['description']}</dd>
+                                       <dd class="link"><a href="{$r['url']}">阅读更多</a></dd>
+                                   </dl>
+                                   <dl class="rec-list-video">
+                                       <dt>{$r['short_title']}</dt>
+                                       <dd class="rec-list-video-con">
+                                        
+                                        <!-- 这里是视频代码 -->
+                    {if $r['platform']=='qq'}
+                        <iframe frameborder="0" width="450" height="260" src="http://v.qq.com/iframe/player.html?vid={$r['platform_vid']}&tiny=1&auto=0" allowfullscreen></iframe>
+                    {elseif $r['platform']=='letv'}
+                    <object width="780" height="430"><param name="allowFullScreen" value="true"><param name="flashVars" value="id={$r['platform_vid']} " /><param name="movie" value="http://i7.imgs.letv.com/player/swfPlayer.swf?autoplay=0" /><embed src="http://i7.imgs.letv.com/player/swfPlayer.swf?autoplay=0" flashVars="id={$r['platform_vid']}" width="780" height="430" allowFullScreen="true" type="application/x-shockwave-flash" ></embed></object>
+
+                    {elseif $r['platform']=='youku'}
+                        <iframe frameborder="0" width="780" height="430" src="http://player.youku.com/embed/{$r['platform_vid']}" allowfullscreen></iframe>
+                    {elseif $r['platform']=='tudou'}
+                        <iframe src="http://www.tudou.com/programs/view/html5embed.action?typpe=0&code={$r['platform_vid']}&lcode=&resourceId=0_06_05_99" allowtransparency="true" allowfullscreen="truue" allowfullscreenInteractive="true" scrolling="no" border="0" frameborder="0" width="780" height="430"></iframe>
+                    {/if}
+
+                                       </dd>
+                                       <dd class="info"><a href="{$r['url']}"><span class="price">￥{$r['price']}</span><span>立即购买>></span></a></dd>
+                                   </dl>
+                                   <div class="circular"></div>
+                                </div>
+                            {/loop}
+                            {/pc}
+
+                            
+                        </div>
+                        <a href="javascript:;" class="more">查看更多</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- con结束 -->
+{template "content","footer"}

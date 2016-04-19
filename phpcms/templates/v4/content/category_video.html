@@ -1,0 +1,65 @@
+{template "content","header"}    
+<link rel="stylesheet" href="{CSS_PATH}v4/swiper.min.css">
+<link rel="stylesheet" href="{CSS_PATH}v4/index_video.css">
+<script type="text/javascript" src="{JS_PATH}v4/swiper.min.js"></script>
+<script type="text/javascript" src="{JS_PATH}v4/index_video.js"></script> 
+        <!-- con开始 -->
+        <div class="con-out">
+            <!-- slide开始 -->
+            <div class="slide">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        {pc:content  action="lists" tagid="category_video_1" typeid="53" catid="15" order="id DESC" thumb="1" num="10"}
+                            {loop $data $r} 
+                            <div class="swiper-slide"><a href="{$r['url']}"><img src="{$thumb}" alt="{$title}"><span class="tag">尝鲜</span><span class="title">{str_cut($title,40,false)}</span></a></div> 
+                            {/loop}
+                        {/pc}
+                        
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"><s class="slide-r-icon"></s></div>
+                    <div class="swiper-button-prev"><s class="slide-l-icon"></s></div>
+                </div>
+            </div>
+            <!-- slide结束 -->
+            <div class="column">
+                <div class="w-1170">
+                    <h2 class="clearfix"><span class="title">栏目</span><p class="column-nav">
+                        <a href="#" class="active">海外视频鲜知道</a>
+                        <a href="#">尝鲜调查图</a>
+                        <a href="#">科技碎碎念</a>
+                        <a href="#">螃蟹八分熟</a>
+                    </p></h2>
+                    <div class="column-list clearfix">
+                        {pc:content  action="lists" tagid="category_video_2" modelid="11" catid="16" order="id DESC" thumb="1" num="6"}
+                            {loop $data $r}
+                                <dl>
+                                <dt><a href="{$r['url']}"><img src="{$r['thumb']}" alt="{$r['title']}"><s class="video-big-icon"></s></a></dt>
+                                <dd><a href="{$r['url']}">{$r['title']}</a></dd>
+                                </dl>  
+                            {/loop}
+                        {/pc}
+                         
+                    </div>
+                    <a href="http://phpcmsv9.mofang.com/index.php?m=content&amp;c=index&amp;a=type_list&amp;typeid=53&amp;modelid=11" class="more">更多</a>
+                </div>
+            </div>
+            <div class="news">
+                <div class="w-1170">
+                    <h2>视频评测</h2>
+                    <div class="news-list clearfix">
+                        {pc:content  action="lists" tagid="category_video_down" modelid="11" typeid="53" catid="16,17,18,19" order="id DESC" thumb="1" num="6"}
+                            {loop $data $r}
+                            <dl>
+                            <dt><a href="{$r['url']}"><img src="{$r['thumb']}" alt="{$r['title']}"></a></dt>
+                            <dd class="title"><a href="{$r['url']}">{$r['title']}</a></dd>
+                            </dl>  
+                            {/loop}
+                        {/pc}  
+                    </div>
+                    <a href="{APP_PATH}index.php?m=content&c=index&a=type_list&typeid=53&modelid=11" class="more">更多</a>
+                </div>
+            </div>
+        </div>
+        <!-- con结束 -->
+{template "content","footer"}    

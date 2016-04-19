@@ -1,0 +1,96 @@
+.main {
+  padding: 0 1.06667rem; }
+
+.m-box {
+  padding: 0 0.81778rem;
+  margin-bottom: 1.24444rem;
+  border: 1px solid #d6d6d6;
+  box-shadow: 0rem 0.14222rem 0.53333rem 0rem #d6d6d6;
+  background: #fff; }
+
+.m-box h2 {
+  font-size: 1.06667rem;
+  color: #1c89ca;
+  padding: 0.88889rem 0 0.35556rem 0.10667rem; }
+
+.m-box dl {
+  padding: 1.06667rem 0;
+  border-bottom: 1px solid #eaeaea; }
+
+.m-box dl dt {
+  float: left; }
+
+.m-box dl .m-title {
+  line-height: 1.5em; }
+
+.m-box dl .m-date {
+  color: #757575;
+  font-size: 0.85333rem; }
+
+.m-box .m-box-spec dl {
+  min-height: 5.12rem; }
+
+.m-box-spec dl dt {
+  width: 6.25778rem;
+  height: 5.12rem; }
+
+.m-box-spec dl dt img {
+  width: 6.25778rem;
+  height: 5.12rem; }
+
+.m-box-spec dl dd {
+  margin-left: 7.11111rem; }
+
+.m-box-spec dl .m-title {
+  font-size: 1.06667rem; }
+
+.m-box-spec dl .m-date {
+  margin-top: 1.24444rem; }
+
+.m-box .m-box-normal dl {
+  min-height: 3.55556rem; }
+
+.m-box-normal dl dt {
+  width: 4.19556rem;
+  height: 3.55556rem; }
+
+.m-box-normal dl dt img {
+  width: 4.19556rem;
+  height: 3.55556rem; }
+
+.m-box-normal dl dd {
+  margin-left: 4.97778rem; }
+
+.m-box-normal dl .m-title {
+  font-size: 0.99556rem; }
+
+.m-box-normal dl .m-date {
+  margin-top: 0.88889rem; }
+
+.m-list .m-list-more {
+  display: block;
+  text-align: center;
+  line-height: 3.2rem;
+  color: #4caf50;
+  font-size: 1.06667rem; }
+
+.m-new ul {
+  padding: 0.53333rem 0 0.88889rem 0; }
+
+.m-new ul li {
+  position: relative;
+  padding-left: 1.42222rem;
+  font-size: 0.99556rem;
+  line-height: 1.5em;
+  margin-bottom: 0.53333rem; }
+
+.m-new ul li span {
+  position: absolute;
+  display: inline-block;
+  width: 0.35556rem;
+  height: 0.35556rem;
+  left: 0.21333rem;
+  top: 0.53333rem;
+  background: #ccc; }
+
+/*# sourceMappingURL=index.css.map */

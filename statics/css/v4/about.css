@@ -1,0 +1,91 @@
+/* 
+* @Author: xukuikui
+* @Date:   2016-01-19 17:17:53
+* @Last Modified by:   xukuikui
+* @Last Modified time: 2016-02-24 09:54:46
+*/ 
+
+.container {
+	    /*margin-top: 20px;*/
+    background-color: #FFF;
+    margin: 0 auto 25px;
+    max-width: 1212px;
+    min-width: 810px;
+    position: relative;
+    overflow: hidden;
+	    margin-top: 20px;
+	    margin-bottom: 20px;
+
+}
+
+.clear {
+    zoom: 1;
+}
+
+.company-title-list {
+	    width: auto;
+    height: 60px;
+    list-style: none;
+    margin: 0;
+    font-size: 16px;
+}
+
+.bottom-solid-line {
+    border-bottom: 1px solid #EEE;
+}
+
+
+
+.company-title-list li {
+    float: left;
+}
+
+.bottom-solid-line {
+    border-bottom: 1px solid #EEE;
+}
+
+.company-title-list li a, .company-title-list li h1 {
+    display: block;
+    margin: 0;
+    padding: 20px 30px;
+    border-right: 1px solid #EEE;
+    background-color: #FBFBFB;
+}
+
+.company-title-list li h1 {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #FFF;
+}
+
+.company-title-list li a, .company-title-list li h1 {
+    display: block;
+    margin: 0;
+    padding: 20px 30px;
+    border-right: 1px solid #EEE;
+    background-color: #FBFBFB;
+}
+
+.content {
+    margin: 20px;
+    overflow: hidden;
+    line-height: 25px;
+}
+
+.about-content {
+    min-height: 500px;
+    padding: 10px 30px;
+}
+
+p, fieldset, table, pre {
+    margin-bottom: 1em;
+}
+
+
+
+
+
+
+
+
+

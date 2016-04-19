@@ -1,0 +1,49 @@
+.main {
+  margin: 1.06667rem;
+  background: #fff;
+  padding: 0.88889rem;
+  box-shadow: -0.03556rem 0.10667rem 0.10667rem 0.10667rem #eee; }
+
+.main-con {
+  font-size: 0.99556rem;
+  padding-bottom: 0.71111rem;
+  border-bottom: 0.03556rem solid #eaeaea; }
+
+.share {
+  margin: 1.67111rem 1.06667rem; }
+
+.main-con h1 {
+  font-size: 1.20889rem;
+  line-height: 1em; }
+
+.main-con .autor {
+  display: block;
+  font-size: 0.85333rem;
+  color: #cccccc;
+  margin: 0.99556rem 0rem;
+  line-height: 1em; }
+
+.arc-con {
+  line-height: 1.5em; }
+
+.arc-con img {
+  vertical-align: middle;
+  max-width: 100%;
+  margin: 0.35556rem 0rem; }
+
+.arc-con video, .acr_con embed {
+  max-width: 100%;
+  margin: 0.35556rem 0rem; }
+
+.keywrod {
+  margin-top: 3.48444rem; }
+
+.keywrod span {
+  font-weight: bold; }
+
+.comment h2 {
+  font-size: 1.06667rem;
+  color: #2389cb;
+  margin: 1.06667rem 0rem 0.53333rem; }
+
+/*# sourceMappingURL=show.css.map */

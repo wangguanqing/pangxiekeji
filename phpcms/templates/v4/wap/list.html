@@ -1,0 +1,63 @@
+{template "wap","header"}
+<link rel="stylesheet" href="{CSS_PATH}v4/wap/index.css">
+<script> 
+function getLocalTime(tm){ 
+    var tt=new Date(parseInt(tm) * 1000).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " "); 
+    tt = tt.replace('GMT+8','');
+    return tt; 
+}  
+
+$(document).ready(function(){
+     var page = 2;
+     var pagesize = 9;
+    $('#more').click(function(){
+        $.ajax({   
+            url:'{APP_PATH}api_v2.php?op=phpcmsv9&file=article&action=load_more&callback=jscallback', 
+            dataType:'jsonp',  
+            type:'get',   
+            data:'page='+page+'&pagesize='+pagesize+'&modelid={$CAT[modelid]}&catid={$catid}',   
+            async : false, //默认为true 异步   
+            error:function(){   
+               alert('error');   
+            },   
+            success:function(data){   
+                var html = '';
+                $.each(data, function(idx, obj) {
+                    html = html + '<dl><dt><a href="'+obj.url+'"><img src="'+obj.thumb+'"></a></dt><dd class="m-title"><a href="'+obj.url+'">'+obj.title+'</a></dd><dd class="m-date">'+getLocalTime(obj.inputtime)+'</dd></dl>';
+                });
+                page = page +1;
+               $("#type_list").append(html);
+            }
+        });
+    }); 
+});
+
+</script>
+
+<!-- header -->
+
+		<div class="main">
+			<div class="m-box m-list">
+				<h2>{$CAT['name']}</h2>
+				<div class="m-box-spec m-list-con" id="type_list">
+                    {pc:content  action="lists"  catid="$catid" order="id DESC" thumb="1" num="9"}
+                        {loop $data $r}
+						<dl>
+							<dt>
+								<a href="{$r['url']}"><img src="{$r['thumb']}"></a>
+							</dt>
+							<dd class="m-title">
+								<a href="{$r['url']}">{$r['title']}</a>
+							</dd>
+							<dd class="m-date">{date("Y-m-d H:i",$r['inputtime'])}</dd>
+						</dl> 
+					   {/loop}
+                    {/pc}
+				</div>
+				<span class="m-list-more" id="more">更多</span>
+			</div> 
+		</div>
+
+<!-- footer -->
+{template "wap","footer"}
+		 

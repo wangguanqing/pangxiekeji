@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="format-detection" content="telephone=no" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}"> 
+<script type="text/javascript" src="{JS_PATH}v4/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" href="{CSS_PATH}v4/reset.css">
+<link rel="stylesheet" href="{CSS_PATH}v4/common.css">
+
+</head>
+
+<body>
+	<div class="page">
+        <!-- 头部开始 -->
+        <div class="header">
+            <div class="w-1170 clearfix">
+                <a href="{APP_PATH}" class="logo"></a>
+                <dl class="info">
+                    <dt><a href="mailto:tougao@pangxiekeji.com">投稿</a></dt>
+                    <dd><a href="http://weibo.com/p/1006065606718419" target="_blank" class="weibo-icon">微博</a></dd>
+                    <dd><a href="#" class="weixin-icon">微信</a></dd>
+                </dl>
+            </div>
+            <div class="nav">
+            <div class="w-1170 clearfix">
+                <ul class="nav-list clearfix">
+                    {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+                        <li><a href="{APP_PATH}" {if $catid==0}class="index-active"{/if}><s class="index-con"></s></a></li>
+                        {loop $data $r}
+                            {if $r['catid']==13 or $r['catid']==14}
+                                <li><a href="{$r[url]}" {if $catid==$r['catid']}class="index-active"{/if}>{$r['catname']}  <s class="hot-icon" style="z-index: 999;">hot</s></a></li>
+                            {else}
+                                <li><a href="{$r[url]}" {if $catid==$r['catid']}class="index-active"{/if}>{$r['catname']}</a></li>
+                            {/if}
+                        {/loop}
+                    {/pc} 
+                </ul>
+                <form action="{APP_PATH}index.php?m=content&c=tag&a=lists"  method="GET" class="search">
+                    <input type="hidden" name="m" value="content"/> 
+                    <input type="hidden" name="c" value="tag"/> 
+                    <input type="hidden" name="a" value="lists"/> 
+                    <input type="text" name="tag" id="tag" class="keyword" style="margin-top: 0px;">
+                    <input type="submit" class="search-icon">
+                </form>
+            </div>
+        </div>
+        </div>
+<!-- 头部结束 -->

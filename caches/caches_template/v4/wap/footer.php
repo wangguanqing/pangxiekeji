@@ -1,0 +1,21 @@
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><!-- footer -->
+        <div class="footer">
+            <div class="f-corp">
+                <p class="corp-name"><span>螃蟹科技</span> 智能设备新媒体</p>
+                <p class="corp-info">
+                    <a href="<?php echo get_catid_url(2);?>">关于我们</a>|
+                    <a href="<?php echo get_catid_url(4);?>">广告服务</a>|
+                    <a href="<?php echo get_catid_url(3);?>">联系方式</a>|
+                    <a href="<?php echo get_catid_url(20);?>">投稿方式</a>
+                </p>
+                <p class="corp-info">意见反馈：<a href="mailto:bd@pangxiekeji.com">bd@pangxiekeji.com</a></p>
+            </div>
+            <div class="f-copy">
+                &copy;2015 PANGXIEKEJI.COM 螃蟹科技 京ICP备15036583号-1
+            </div>
+        </div>
+        <!-- footer -->
+    </div>
+    
+</body>
+</html>

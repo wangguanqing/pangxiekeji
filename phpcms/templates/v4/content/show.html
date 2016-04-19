@@ -1,0 +1,83 @@
+{template "content","header"}
+<link rel="stylesheet" href="{CSS_PATH}v4/show.css">
+
+        <!-- con开始 -->
+        <div class="con-out">
+            <div class="show-con">
+                <div class="w-780">
+                    <h3 class="dec">{get_admin_name($username)} <s></s> {$inputtime} <s></s> 原创</h3>
+                    <div class="show-con-con">
+                        <h1>{$title}</h1>
+                        <div>
+                            {$content}
+                        </div>
+                    </div>
+                    <div class="keyword"> 
+                        {loop $keywords $keyword}
+                        {if trim($keyword)!=''}
+                        <a href="{APP_PATH}index.php?m=content&c=tag&a=lists&tag={urlencode($keyword)}">{$keyword}</a>
+                            {/if}    
+                        {/loop} 
+                    </div>
+
+                    <div class="share">
+                        <!-- 分享占位 -->
+<!-- JiaThis Button BEGIN  -->
+<div class="jiathis_style_32x32">
+    <a class="jiathis_button_qzone"></a>
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_tqq"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_renren"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+    <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+                    </div>
+                </div>
+            </div>
+            {pc:content action="relation" relation="$relation" id="$id" catid="$catid" num="5" keywords="$rs[keywords]"}
+            {if $data}
+            <div class="related">
+                <div class="w-780">
+                    <h2>相关资讯</h2>
+                    <div class="related-list clearfix">
+                        
+                                {loop $data $r}
+                                    <dl>
+                                        <dt><a href="{$r['url']}"><img src="{$r['thumb']}" alt=""></a></dt>
+                                        <dd><a href="{$r['url']}">{$r['title']}</a></dd>
+                                    </dl>
+                                {/loop}
+                            
+                    </div>
+                </div>
+            </div>
+            {/if}
+            {/pc} 
+            <div class="comment">
+                <div class="w-780">
+                    <h2>评论</h2>
+                    <div class="comment-con">
+                    <!-- 评论列表占位 -->
+                    <div class="ds-thread" data-thread-key="content-news-{$id}" data-title="{$title}" data-url="{$url}"></div>
+                    <script type="text/javascript">
+                        var duoshuoQuery = {short_name:"pangxiekeji"};
+                        (function() {
+                            var ds = document.createElement('script');
+                            ds.type = 'text/javascript';ds.async = true;
+                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                            ds.charset = 'UTF-8';
+                            (document.getElementsByTagName('head')[0]
+                                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+                        })();
+                    </script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- con结束 -->
+
+{template "content","footer"}

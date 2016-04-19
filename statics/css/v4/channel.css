@@ -1,0 +1,44 @@
+/* 
+* @Author: xukuikui
+* @Date:   2016-01-19 17:17:53
+* @Last Modified by:   xukuikui
+* @Last Modified time: 2016-02-22 16:41:12
+*/
+
+.pingce{
+	width:245px;
+	margin:0 auto 50px;
+}
+.channel-list{
+	 text-align:center;
+	 margin:35px auto 50px;
+}
+
+.channel-list a{
+	margin:0px 45px;
+}	
+.channel-list a.active{
+	color:#2389cb;
+}
+.line-icon{
+	border-left:1px solid #dcdcdc;
+}
+.hot-video-list a span{
+	background:none;
+	z-index:2;
+}
+.bg-gra{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	z-index:1;
+	width:100%;
+	height:150px;
+	background:-webkit-linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.8));
+}
+
+
+
+
+
+
